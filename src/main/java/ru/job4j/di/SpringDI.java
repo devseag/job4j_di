@@ -11,6 +11,6 @@ public class SpringDI {
         ui.add("John Blinov");
         ui.add("Ivan ivanov");
         ui.print();
-        ui.print("Question? ");
+//        ui.print("Question? ");
     }
 }
