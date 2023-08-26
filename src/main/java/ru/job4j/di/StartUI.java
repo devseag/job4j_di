@@ -6,12 +6,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class StartUI {
 
+    @Autowired
     private Store store;
 
     @Autowired
-    public void setStore(Store store) {
-        this.store = store;
-    }
+    private ConsoleInput consoleInput;
 
     public void add(String value) {
         store.add(value);
@@ -21,5 +20,9 @@ public class StartUI {
         for (String value : store.getAll()) {
             System.out.println(value);
         }
+    }
+
+    public void print(String question) {
+        consoleInput.askStr(question);
     }
 }
